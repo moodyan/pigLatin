@@ -12,9 +12,16 @@ var toPigLatin = function(word){
       for(var i=0; i<= consonants.length; i++){
         if(word[0]===vowels[i]){
           return word+"ay";
-        } else if(word[0] === consonants[i]){
-          var somthing = word.replace(word[0],"")
-          return somthing+word[0]+"ay"
+
+        }else if((word[1]&&word[0])=== consonants[i]){
+          alert("works");
+          var twoConsonant = word.replace(word[0],"").replace(word[1],"");
+          return twoConsonant+word[0]+word[1]+"ay";
+
+        }else if(word[0] === consonants[i]){
+          alert("um workss");
+          var noConsonant = word.replace(word[0],"");
+          return noConsonant+word[0]+"ay";
         }else{
           //alert("doesnt begin with vowel")
         }
