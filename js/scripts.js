@@ -9,9 +9,8 @@ var toPigLatin = function(word){
       return word[0]+"way";
     }
   } else if(word.length >= 2){
-      for(var i=0; i<= word.length; i++){
+      for(var i=0; i<= vowels.length; i++){
         if(word[0]===vowels[i]){
-          console.log(word)
           return word+"ay";
         } else{
           //alert("doesnt begin with vowel")
