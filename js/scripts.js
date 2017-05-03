@@ -1,6 +1,6 @@
 //back-end
 var vowels = ["a", "e", "i", "o", "u"];
-
+var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
 
 
 var toPigLatin = function(word){
@@ -9,10 +9,13 @@ var toPigLatin = function(word){
       return word[0]+"way";
     }
   } else if(word.length >= 2){
-      for(var i=0; i<= vowels.length; i++){
+      for(var i=0; i<= consonants.length; i++){
         if(word[0]===vowels[i]){
           return word+"ay";
-        } else{
+        } else if(word[0] === consonants[i]){
+          var somthing = word.replace(word[0],"")
+          return somthing+word[0]+"ay"
+        }else{
           //alert("doesnt begin with vowel")
         }
       }
@@ -21,13 +24,7 @@ var toPigLatin = function(word){
       }
 }
 
-  // for(var i=0; i<= word.length; i++){
-  //   if(word[0]===vowels[i]){
-  //     return word+"ay";
-  //   } else{
-  //     alert("doesnt begin with vowel")
-  //   }
-  // }
+
 
 
 

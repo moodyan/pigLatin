@@ -8,7 +8,7 @@ Example Output: 3
 Example Input: i
 Example Output: iway
 
-The program adds "way" to all words beginning with a vowel.
+~The program adds "way" to all words beginning with a vowel.
 Example Input: away
 Example Output: awayway
 
@@ -16,7 +16,7 @@ for words beginning with "y" treat "y" as a consonant
 Example Input: your
 Example Output: ouryay
 
-For words beginning with one consonants, move the first consonant to the end, and add "ay".
+~For words beginning with one consonants, move the first consonant to the end, and add "ay".
 Example Input: latin
 Example Output: atinlay
 
